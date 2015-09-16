@@ -8,3 +8,8 @@ Dice::Dice(unsigned int begin_range, unsigned int end_range)
   else
     generator(end_range, begin_range);
 }
+
+unsigned int Dice::roll()
+{
+  return 5;
+}
