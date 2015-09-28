@@ -1,15 +1,14 @@
 #include <iostream>
 #include "player.h"
 
-Player::Player()
+Player::Player(string name)
 {
-    score = 0;
+    m_name = name;
+    m_score = 0;
 }
 
-bool Player::add_turn(int roll)
+void Player::add_turn(int roll)
 {
-    score = score + roll;
-    if(score>=100)
-        return true;
-    return false;
+    m_score += roll;
+    return;
 }
