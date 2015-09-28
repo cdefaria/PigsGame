@@ -1,15 +1,13 @@
 #include"dice.h"
 
-Dice::Dice(unsigned int begin_range, unsigned int end_range)
+Dice::Dice(int sides)
 {
-  
-  if(begin_range <= end_range)
-    generator(begin_range, end_range);
-  else
-    generator(end_range, begin_range);
+  /* initialize random seed: */
+  srand (time(NULL));
+  m_sides = sides;
 }
 
-unsigned int Dice::roll()
+int Dice::roll()
 {
-  return 5;
+  return (rand() % m_sides) + 1; //generate secret number between 1 and sides
 }
