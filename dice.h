@@ -8,8 +8,9 @@ using namespace std;
 
 class Dice {
   public:
-    Dice(int sides);
+    Dice();
     int roll(); //retruns a dice roll in the range
+    void set_sides(int sides);
 
   private:
     int m_sides;
